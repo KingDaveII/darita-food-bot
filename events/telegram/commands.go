@@ -3,10 +3,11 @@ package telegram
 import (
 	"errors"
 	"log"
-	"my_tele_bot/lib/e"
-	"my_tele_bot/storage"
 	"net/url"
 	"strings"
+
+	"github.com/KingDaveII/darita-food-bot/lib/e"
+	"github.com/KingDaveII/darita-food-bot/storage"
 )
 
 const (
@@ -32,7 +33,7 @@ func (p *Processor) doCmd(text string, chatID int, username string) error {
 	case StartCmd:
 		return p.sendHello(chatID)
 	default:
-		return p.tg.SendMessage(chatID, msgUnknownCommand)
+		return p.tg.SendMessage(chatID, msgUnkownCommand)
 	}
 }
 

@@ -2,10 +2,11 @@ package telegram
 
 import (
 	"errors"
-	"my_tele_bot/clients/telegram"
-	"my_tele_bot/events"
-	"my_tele_bot/lib/e"
-	"my_tele_bot/storage"
+
+	"github.com/KingDaveII/darita-food-bot/clients/telegram"
+	"github.com/KingDaveII/darita-food-bot/events"
+	"github.com/KingDaveII/darita-food-bot/lib/e"
+	"github.com/KingDaveII/darita-food-bot/storage"
 )
 
 type Processor struct {

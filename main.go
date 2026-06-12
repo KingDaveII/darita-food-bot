@@ -3,7 +3,8 @@ package main
 import (
 	"flag"
 	"log"
-	"my_tele_bot/clients/telegram"
+
+	"github.com/KingDaveII/darita-food-bot/clients/telegram"
 )
 
 const (

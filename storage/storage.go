@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"my_tele_bot/lib/e"
+	"github.com/KingDaveII/darita-food-bot/lib/e"
 )
 
 type Storage interface {
