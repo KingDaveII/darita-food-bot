@@ -99,6 +99,7 @@ func isAddCmd(text string) bool {
 func isURL(text string) bool {
 	u, err := url.Parse(text)
 
+	// only valid URLs with scheme and host are allowed
 	return err == nil && u.Host != ""
 
 }

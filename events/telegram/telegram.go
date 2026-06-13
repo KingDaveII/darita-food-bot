@@ -39,6 +39,7 @@ func (p *Processor) Fetch(limit int) ([]events.Event, error) {
 	}
 
 	if len(updates) == 0 {
+		// TODO: return internal error instead of the second nil
 		return nil, nil
 	}
 
