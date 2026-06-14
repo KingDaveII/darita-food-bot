@@ -5,6 +5,7 @@ import (
 	"log"
 
 	tgClient "github.com/KingDaveII/darita-food-bot/clients/telegram"
+	eventconsumer "github.com/KingDaveII/darita-food-bot/consumer/event-consumer"
 	"github.com/KingDaveII/darita-food-bot/events/telegram"
 	"github.com/KingDaveII/darita-food-bot/storage/files"
 )
@@ -23,10 +24,10 @@ func main() {
 
 	log.Print("service started")
 
-	consumer := telegram.New(eventsProcessor, eventsProcessor, batchSize)
+	consumer := eventconsumer.New(eventsProcessor, eventsProcessor, batchSize)
 
 	if err := consumer.Start(); err != nil {
-		log.Fatalf("can't start consumer: %s", err.Error())
+		log.Fatal("service is stopped: ", err)
 	}
 
 }
