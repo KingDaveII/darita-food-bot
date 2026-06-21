@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	_ "github.com/mattn/go-sqlite3"
 	"github.com/KingDaveII/darita-food-bot/storage"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 type Storage struct {
@@ -42,7 +42,7 @@ func (s *Storage) PickRandom(ctx context.Context, userName string) (*storage.Pag
 	var url string
 	err := s.db.QueryRowContext(ctx, q, userName).Scan(&url)
 	if err == sql.ErrNoRows {
-		return nil, nil
+		return nil, storage.ErrNoSavedPages
 	}
 	if err != nil {
 		return nil, fmt.Errorf("can't pick random page: %w", err)

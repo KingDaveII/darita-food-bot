@@ -12,6 +12,9 @@ darita-food-bot
 # Test binary, built with `go test -c`
 *.test
 
+# SQLite database files
+data/sqlite/
+
 # Code coverage profiles and other test artifacts
 *.out
 coverage.*
