@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/KingDaveII/darita-food-bot/storage"
 )
 
